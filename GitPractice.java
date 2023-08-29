@@ -1,8 +1,9 @@
 import java.io.IOException;
 import java.io.FileWriter;
+import java.io.FileReader;
 
 
-public class FileWriting {
+public class GitPractice {
 
     public static void writeFile(String str, String fileName){
         try {
@@ -14,9 +15,21 @@ public class FileWriting {
             System.out.println(e.getMessage());
         }
     }
+
+    public static void readFile(String fileName){
+        try {
+            FileReader fr = new FileReader(fileName);
+        }
+
+        catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        
+    }
     public static void main(String[]args){
 
-        FileWriting.writeFile("Hello", "test.txt");
+        GitPractice.writeFile("Hello", "test.txt");
+        GitPractice.readFile("test.txt");
     }
 }
 
