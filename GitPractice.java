@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.FileWriter;
+import java.io.BufferedReader;
 import java.io.FileReader;
 
 
@@ -16,20 +17,24 @@ public class GitPractice {
         }
     }
 
-    public static void readFile(String fileName){
+    public static String readFile(String fileName){
         try {
             FileReader fr = new FileReader(fileName);
+            BufferedReader br = new BufferedReader(fr);
+            String str = br.readLine();
+            return str;
         }
 
         catch (IOException e) {
             System.out.println(e.getMessage());
+            return null;
         }
         
     }
     public static void main(String[]args){
 
         GitPractice.writeFile("Hello", "test.txt");
-        GitPractice.readFile("test.txt");
+        System.out.println(GitPractice.readFile("test.txt"));
     }
 }
 
