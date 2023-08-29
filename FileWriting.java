@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.io.FileWriter;
 
 
-public class File {
+public class FileWriting {
 
     public static void writeFile(String str, String fileName){
         try {
@@ -16,7 +16,7 @@ public class File {
     }
     public static void main(String[]args){
 
-        File.writeFile("Hello", "test.txt");
+        FileWriting.writeFile("Hello", "test.txt");
     }
 }
 
