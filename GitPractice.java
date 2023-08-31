@@ -43,7 +43,7 @@ public class GitPractice {
 
         GitPractice.writeFile("Hello", "test.txt");
         System.out.println(GitPractice.readFile("test.txt"));
-        System.out.println(GitPractice.countCharacters("test.text"));
+        System.out.println(GitPractice.countCharacters("test.txt"));
     }
 }
 
