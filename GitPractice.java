@@ -29,12 +29,21 @@ public class GitPractice {
             System.out.println(e.getMessage());
             return null;
         }
-        
     }
+
+    public static int countCharacters(String fileName) {
+        String output = readFile(fileName);
+        if (output == null) {
+            return -1;
+        }
+        return output.length();
+    }
+
     public static void main(String[]args){
 
         GitPractice.writeFile("Hello", "test.txt");
         System.out.println(GitPractice.readFile("test.txt"));
+        System.out.println(GitPractice.countCharacters("test.txt"));
     }
 }
 
